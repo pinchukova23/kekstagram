@@ -1,6 +1,5 @@
-export const getRandomNamber = function(min = 1, max = 25) {
-    const randomNamber = Math.floor(Math.random() * (max - 1)) + min;
-    return randomNamber
+export const getRandomNumber = function(min = 1, max = 25) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
 
