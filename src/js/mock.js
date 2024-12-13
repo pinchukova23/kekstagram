@@ -33,7 +33,7 @@ export const generateMockData = function (count) {
 
     for(let i = 0; i < count; i++) {
         const newId = `${i}-${getRandomNumber()}`;
-        const newUrl = `src/photos/${i + 1}.jpg`;
+        const newUrl = `/assets/public/photos/${i + 1}.jpg`;
         const newDescription = DESCRIPTIONS[getRandomNumber(0, DESCRIPTIONS.length - 1)];
         const newLike = `${getRandomNumber(15, 200)}`;
         const newComments = generateComments(getRandomNumber(0, NAMES.length));
