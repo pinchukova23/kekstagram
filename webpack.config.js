@@ -2,6 +2,7 @@
 
 const path = require("path");
 const HtmlBundlerPlugin = require("html-bundler-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 const isProduction = process.env.NODE_ENV == "production";
 
 const config = {
@@ -31,6 +32,11 @@ const config = {
         filename: "assets/css/[name].[contenthash:8].css",
       },
     }),
+    new CopyPlugin({
+      patterns: [
+          { from: "src/public", to: "assets/public" } //to the dist root directory
+      ],
+  })
   ],
   module: {
     rules: [
@@ -50,7 +56,7 @@ const config = {
         test: /\.(svg|png|jpg|gif|ico)$/i,
         type: "asset/resource",
         generator: {
-          filename: "assets/img/[name].[hash:8][ext]",
+          filename: "assets/img/[name][ext]",
         },
       },
       {

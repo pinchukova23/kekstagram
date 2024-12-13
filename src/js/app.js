@@ -1,1 +1,3 @@
-import "./test";
+import {generateMiniatures} from './miniatures';
+
+generateMiniatures();
