@@ -1,5 +1,3 @@
-import {NAMES, MASSEGES, AVATAR} from './const'
-import {generateMockData} from './mock'
-import {generateComments} from './mock'
+import {generateMiniatures} from './miniatures';
 
-console.log(generateMockData(25));
+generateMiniatures();
